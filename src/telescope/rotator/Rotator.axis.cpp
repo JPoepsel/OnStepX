@@ -22,6 +22,8 @@
     As37h39bb encAxis3(AXIS3_ENCODER_A_PIN, AXIS3_ENCODER_B_PIN, 3);
   #elif AXIS3_ENCODER == SERIAL_BRIDGE
     SerialBridge encAxis3(3);
+  #elif AXIS3_ENCODER == TW8_SPI
+    IcTw8 encAxis3(AXIS3_ENCODER_A_PIN);
   #endif
 
   #if AXIS3_SERVO_FEEDBACK == FB_PID

@@ -23,6 +23,8 @@
       As37h39bb encAxis4(AXIS4_ENCODER_A_PIN, AXIS4_ENCODER_B_PIN, 4);
     #elif AXIS4_ENCODER == SERIAL_BRIDGE
       SerialBridge encAxis4(4);
+    #elif AXIS4_ENCODER == TW8_SPI
+      IcTw8 encAxis4(AXIS4_ENCODER_A_PIN);
     #endif
 
     #if AXIS4_SERVO_FEEDBACK == FB_PID
@@ -80,7 +82,9 @@
       As37h39bb encAxis5(AXIS5_ENCODER_A_PIN, AXIS5_ENCODER_B_PIN, 5);
     #elif AXIS5_ENCODER == SERIAL_BRIDGE
       SerialBridge encAxis5(5);
-    #endif
+    #elif AXIS5_ENCODER == TW8_SPI
+      IcTw8 encAxis5(AXIS5_ENCODER_A_PIN);
+#endif
 
     #if AXIS5_SERVO_FEEDBACK == FB_PID
       Pid pidAxis5(AXIS5_PID_P, AXIS5_PID_I, AXIS5_PID_D, AXIS5_PID_P_GOTO, AXIS5_PID_I_GOTO, AXIS5_PID_D_GOTO, AXIS5_PID_SENSITIVITY);
@@ -137,6 +141,8 @@
       As37h39bb encAxis6(AXIS6_ENCODER_A_PIN, AXIS6_ENCODER_B_PIN, 6);
     #elif AXIS6_ENCODER == SERIAL_BRIDGE
       SerialBridge encAxis6(6);
+    #elif AXIS6_ENCODER == TW8_SPI
+      IcTw8 encAxis6(AXIS6_ENCODER_A_PIN);
     #endif
 
     #if AXIS6_SERVO_FEEDBACK == FB_PID
@@ -194,6 +200,8 @@
       As37h39bb encAxis7(AXIS7_ENCODER_A_PIN, AXIS7_ENCODER_B_PIN, 7);
     #elif AXIS7_ENCODER == SERIAL_BRIDGE
       SerialBridge encAxis7(7);
+    #elif AXIS7_ENCODER == TW8_SPI
+      IcTw8 encAxis7(AXIS7_ENCODER_A_PIN);
     #endif
 
     #if AXIS7_SERVO_FEEDBACK == FB_PID
@@ -251,6 +259,8 @@
       As37h39bb encAxis8(AXIS8_ENCODER_A_PIN, AXIS8_ENCODER_B_PIN, 8);
     #elif AXIS8_ENCODER == SERIAL_BRIDGE
       SerialBridge encAxis8(8);
+    #elif AXIS8_ENCODER == TW8_SPI
+      IcTw8 encAxis8(AXIS8_ENCODER_A_PIN);
     #endif
 
     #if AXIS8_SERVO_FEEDBACK == FB_PID
@@ -308,6 +318,8 @@
       As37h39bb encAxis9(AXIS9_ENCODER_A_PIN, AXIS9_ENCODER_B_PIN, 9);
     #elif AXIS9_ENCODER == SERIAL_BRIDGE
       SerialBridge encAxis9(9);
+    #elif AXIS9_ENCODER == TW8_SPI
+      IcTw8 encAxis9(AXIS9_ENCODER_A_PIN);
     #endif
 
     #if AXIS9_SERVO_FEEDBACK == FB_PID

@@ -13,8 +13,12 @@
   #define SERIAL_A              Serial
 #endif
 
-#define I2C_SDA_PIN             21
-#define I2C_SCL_PIN             22
+#ifndef I2C_SDA_PIN
+  #define I2C_SDA_PIN             21
+#endif
+#ifndef I2C_SCL_PIN
+  #define I2C_SCL_PIN             22
+#endif
 
 // Use the following settings for the 4x TMC UART drivers
 #ifdef STEP_DIR_TMC_UART_PRESENT
@@ -33,7 +37,9 @@
     #ifndef SERIAL_TMC_RX
       #define SERIAL_TMC_RX     0                // Recieving data (GPIO0 unused except for flashing)
     #endif
-    #define SERIAL_TMC_TX       15               // Transmit data (Z-MIN)
+    #ifndef SERIAL_TMC_TX                        // allow TX also predifined (will use the standard I2C to UART jumpers...
+      #define SERIAL_TMC_TX       15               // Transmit data (Z-MIN)
+    #endif 
     #define SPARE_RX_PIN        OFF              // Not supported in this case
   #endif
   // map the driver addresses so axis Axis1(0) is X, Axis2(1) is Y, Axis3(2) is Z, Axis4(3) is E0...

@@ -12,6 +12,7 @@
 #include "../../../encoder/quadrature/Quadrature.h"
 #include "../../../encoder/quadratureEsp32/QuadratureEsp32.h"
 #include "../../../encoder/serialBridge/SerialBridge.h"
+#include "../../../encoder/IC_TW8/IC_TW8.h"
 
 #include "dc/Dc.h"
 #include "tmc2209/Tmc2209.h"

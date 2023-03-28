@@ -1,3 +1,5 @@
+#include <Arduino.h>
+
 /*
  * Title       OnStepX
  * by          Howard Dutton
