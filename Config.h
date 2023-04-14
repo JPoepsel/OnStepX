@@ -25,6 +25,16 @@
 // #define SERIAL_TMC_RX                  35 //         Override default TMC2209 RX pin move to Y-MIN (enable _DRIVER_STATUS to use)
 
 // JP ->
+
+#define STA_SSID                      "PipiKaka"                      // Station SSID to connnect to
+#define STA_PASSWORD                  "5032650326"                  // Wifi Station mode password
+#define STA_DHCP_ENABLED              false                       // Wifi Station/Ethernet DHCP enabled
+#define STA_IP_ADDR                   {192,168,2,201}               // Wifi Station/Ethernet IP Address
+#define STA_GW_ADDR                   {192,168,2,1}               // Wifi Station/Ethernet GATEWAY Address
+#define STA_SN_MASK                   {255,255,255,0}             // Wifi Station/Ethernet SUBNET Mask.
+
+
+
 #define DRIVER_TMC_STEPPER
 
 #define SERIAL_TMC_RX  21 // I2C_SDA_PIN  // jumper TCM2209 uart pins to the I2C pins (who need I2C...)
@@ -107,7 +117,7 @@
 
 #define AXIS1_SERVO_MAX_VELOCITY   (SPD*2) // 2 deg/s (100% power)
 #define AXIS1_SERVO_ACCELERATION   (SPD/2) // acceleration, in steps/s/s for SERVO_TMC2209
-#define AXIS1_SERVO_SYNC_THRESHOLD (SPD*4) // 2 degs, in steps... this allows for alignment
+#define AXIS1_SERVO_SYNC_THRESHOLD (SPD*2) // 2 degs, in steps... this allows for alignment
 
 #define AXIS1_TARGET_TOLERANCE       10.0 // in arc-seconds
 #define AXIS1_PID_P                 0.7                       // P = proportional
@@ -127,7 +137,7 @@
 
 #define AXIS2_SERVO_MAX_VELOCITY   (SPD*2) // 2 deg/s (100% power)
 #define AXIS2_SERVO_ACCELERATION   (SPD/2) // acceleration, in steps/s/s for SERVO_TMC2209
-#define AXIS2_SERVO_SYNC_THRESHOLD (SPD*4) // 2 degs, in steps... this allows for alignment
+#define AXIS2_SERVO_SYNC_THRESHOLD (SPD*2) // 2 degs, in steps... this allows for alignment
 
 #define AXIS2_TARGET_TOLERANCE       10.0 // in arc-seconds
 #define AXIS2_PID_P                 0.6                       // P = proportional
@@ -160,7 +170,7 @@
 
 // for TMC2130, TMC5160, TMC2209U, TMC2226U STEP/DIR driver models:
 #define AXIS1_DRIVER_IHOLD            100 //    OFF, n, (mA.) Current during standstill. OFF uses IRUN/2.0                    Option
-#define AXIS1_DRIVER_IRUN             1000 //    OFF, n, (mA.) Current during tracking, appropriate for stepper/driver/etc.    Option
+#define AXIS1_DRIVER_IRUN             1500 //    OFF, n, (mA.) Current during tracking, appropriate for stepper/driver/etc.    Option
 #define AXIS1_DRIVER_IGOTO            1500 //    OFF, n, (mA.) Current during slews. OFF uses IRUN.                            Option
 // /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /
 
@@ -195,7 +205,7 @@
 
 // for TMC2130, TMC5160, and TMC2209U STEP/DIR driver models:
 #define AXIS2_DRIVER_IHOLD            100 //    OFF, n, (mA.) Current during standstill. OFF uses IRUN/2.0                    Option
-#define AXIS2_DRIVER_IRUN             1000 //    OFF, n, (mA.) Current during tracking, appropriate for stepper/driver/etc.    Option
+#define AXIS2_DRIVER_IRUN             1500 //    OFF, n, (mA.) Current during tracking, appropriate for stepper/driver/etc.    Option
 #define AXIS2_DRIVER_IGOTO            1500 //    OFF, n, (mA.) Current during slews. OFF uses IRUN.                            Option
 // /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /
 
