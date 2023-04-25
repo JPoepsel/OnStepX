@@ -52,7 +52,7 @@
                                           //         MaxSTM3, FYSETC_S6_2, etc.  Other boards and more info. in ~/src/Constants.h
 
 // SERIAL PORT COMMAND CHANNELS --------------------- see https://onstep.groups.io/g/main/wiki/Configuration_Controller#SERIAL_PORTS
-#define SERIAL_A_BAUD_DEFAULT      115200 //   9600, n. Where n=9600,19200,57600,115200,230400,460800 (common baud rates.)    Infreq
+#define SERIAL_A_BAUD_DEFAULT      9600 //   9600, n. Where n=9600,19200,57600,115200,230400,460800 (common baud rates.)    Infreq
 #define SERIAL_B_BAUD_DEFAULT         OFF //   9600, n. Baud rate as above. See (src/pinmaps/) for Serial port assignments.   Option
 #define SERIAL_B_ESP_FLASHING         OFF //    OFF, ON Upload ESP8266 WiFi firmware through SERIAL_B with :ESPFLASH# cmd.    Option
 #define SERIAL_C_BAUD_DEFAULT         OFF //    OFF, n. Baud rate as above. See (src/pinmaps/) for Serial port assignments.   Infreq
@@ -121,17 +121,17 @@
 
 #define AXIS1_TARGET_TOLERANCE       10.0 // in arc-seconds
 #define AXIS1_PID_P                 0.7                       // P = proportional
-#define AXIS1_PID_I                 0.25                       // I = integral
+#define AXIS1_PID_I                 0.3                       // I = integral
 #define AXIS1_PID_D                 0.0                       // D = derivative
 
-#define AXIS1_PID_P_GOTO            0.4            // P = proportional
-#define AXIS1_PID_I_GOTO            0.1            // I = integral
-#define AXIS1_PID_D_GOTO            0.1            // D = derivative
+#define AXIS1_PID_P_GOTO            0.7            // P = proportional
+#define AXIS1_PID_I_GOTO            0.0            // I = integral
+#define AXIS1_PID_D_GOTO            0.0            // D = derivative
   
   
 
 
-#define AXIS2_SERVO_FLTR           OFF // KALMAN // filter type, OFF or KALMAN
+#define AXIS2_SERVO_FLTR           KALMAN // KALMAN // filter type, OFF or KALMAN
 #define AXIS2_SERVO_FLTR_MEAS_U         6 // kalman measurement uncertainty, in encoder ticks
 #define AXIS2_SERVO_FLTR_VARIANCE     0.1 // kalman responsiveness, usually between 0.001 and 1
 
@@ -140,13 +140,13 @@
 #define AXIS2_SERVO_SYNC_THRESHOLD (SPD*2) // 2 degs, in steps... this allows for alignment
 
 #define AXIS2_TARGET_TOLERANCE       10.0 // in arc-seconds
-#define AXIS2_PID_P                 0.6                       // P = proportional
-#define AXIS2_PID_I                 0                         // I = integral
+#define AXIS2_PID_P                 0.7                       // P = proportional
+#define AXIS2_PID_I                 0.3                       // I = integral
 #define AXIS2_PID_D                 0                         // D = derivative
 
-#define AXIS2_PID_P_GOTO            0.4             // P = proportional
-#define AXIS2_PID_I_GOTO            0.1             // I = integral
-#define AXIS2_PID_D_GOTO            0.1             // D = derivative
+#define AXIS2_PID_P_GOTO            0.7             // P = proportional
+#define AXIS2_PID_I_GOTO            0.0             // I = integral
+#define AXIS2_PID_D_GOTO            0.0             // D = derivative
 
 // ------------------------------------------------------------------------------------------------------------
 
