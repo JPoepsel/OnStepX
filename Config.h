@@ -99,14 +99,18 @@
 #define PID_SLEWING_TO_TRACKING_TIME_MS 1000
 
 
+//#define FOCUSER_TEMPERATURE_PIN  TEMP1_PIN
+//#define FEATURE2_TEMPERATURE_PIN      OFF
+
+
 
 #define AXIS1_ENCODER             TW8_SPI
-#define AXIS1_ENCODER_REVERSE         ON  // reverse the count direction
+#define AXIS1_ENCODER_REVERSE        OFF //!!??! ON  // reverse the count direction
 #define AXIS1_ENCODER_ORIGIN            0 // +/- offset so encoder count is 0 at home (for absolute encoders)
 #define AXIS1_ENCODER_A_PIN             4 // SPI CS pin for RA TW8 board (E4 "Hot Bed")
 
 #define AXIS2_ENCODER             TW8_SPI
-#define AXIS2_ENCODER_REVERSE         ON  // reverse the count direction
+#define AXIS2_ENCODER_REVERSE        ON  // reverse the count direction
 #define AXIS2_ENCODER_ORIGIN            0 // +/- offset so encoder count is 0 at home (for absolute encoders)
 #define AXIS2_ENCODER_A_PIN            13 // SPI CS pin for DEC TW8 board (E4 "Fan")
 
@@ -131,7 +135,7 @@
   
 
 
-#define AXIS2_SERVO_FLTR           KALMAN // KALMAN // filter type, OFF or KALMAN
+#define AXIS2_SERVO_FLTR           OFF // KALMAN // KALMAN // filter type, OFF or KALMAN
 #define AXIS2_SERVO_FLTR_MEAS_U         6 // kalman measurement uncertainty, in encoder ticks
 #define AXIS2_SERVO_FLTR_VARIANCE     0.1 // kalman responsiveness, usually between 0.001 and 1
 
